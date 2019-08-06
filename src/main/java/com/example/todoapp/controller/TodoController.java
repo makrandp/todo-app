@@ -39,6 +39,18 @@ public class TodoController {
 		return todoService.findTodoById(todoId);
 	}
 	
+	@GetMapping("todo/get/{title}")
+	public List<Todo> findByTitle(@PathVariable(value = "title") String title)
+	{
+		return todoService.findByTitle(title);
+	}
+	
+	@GetMapping("todo/fetch/{title}")
+	public List<Todo> fetchTodosByTitle(@PathVariable(value = "title") String title)
+	{
+		return todoService.fetchTodos(title);
+	}
+	
 	@PutMapping("todo/{id}")
 	public Todo updateTodo(@PathVariable(value = "id") Long todoId,
 			@RequestBody Todo todo){

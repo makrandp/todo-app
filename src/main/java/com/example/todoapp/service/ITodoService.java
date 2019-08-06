@@ -13,4 +13,6 @@ public interface ITodoService
 	public Todo findTodoById(Long todoId);
 	public Todo updateTodo(Long todoId, Todo todo);
 	public ResponseEntity<?> deleteTodo(Long todoId);
+	public List<Todo> findByTitle(String title);
+	public List<Todo> fetchTodos(String title);
 }

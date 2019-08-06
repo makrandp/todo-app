@@ -56,4 +56,14 @@ public class TodoService implements ITodoService {
 		
 		return ResponseEntity.ok("Todo Deleted Successfully");
 	}
+
+	@Override
+	public List<Todo> findByTitle(String title) {
+		return todoRepository.findByTitle(title);
+	}
+
+	@Override
+	public List<Todo> fetchTodos(String title) {
+		return todoRepository.fetchTodos(title);
+	}
 }
