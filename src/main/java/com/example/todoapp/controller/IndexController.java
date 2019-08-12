@@ -9,6 +9,6 @@ public class IndexController {
 	@GetMapping("/")
 	public String index()
 	{
-		return "Use /todo endpoint";
+		return "Please Use /todo endpoint";
 	}
 }
